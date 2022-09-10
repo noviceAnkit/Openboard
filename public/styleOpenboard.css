@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.options-cont {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+}
+.options-cont > * {
+    font-size: 3rem;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.option-up {
+    padding-top: 1rem;
+}
+.option-down {
+    padding-bottom: 1rem;
+}
+
+.tools-cont {
+    position: absolute;
+    top: 5rem;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 4rem;
+    background-color: rgb(206, 204, 204);
+    border-radius: 12px;
+}
+.tools-cont > * {
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.pencil-tool-cont,
+.eraser-tool-cont {
+    background-color: rgb(206, 204, 204);
+    height: 4rem;
+    width: 9rem;
+    position: absolute;
+    left: 4.7rem;
+    border-radius: 12px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pencil-tool-cont {
+    top: 5rem;
+}
+.eraser-tool-cont {
+    top: 9rem;
+}
+
+.pencil-color-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.pencil-color {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 2rem;
+    border: 0.1rem gray solid;
+    cursor: pointer;
+}
+.red {
+    background-color: red;
+}
+.black {
+    background-color: black;
+}
+.blue {
+    background-color: blue;
+}
+
+.sticky-cont {
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+}
+.header-cont {
+    height: 2rem;
+    background-color: #fff740;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header-cont > * {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    border-radius: 10rem;
+}
+.header-cont > .minimize {
+    background-color: rgb(2, 240, 2);
+}
+.header-cont > .remove {
+    background-color: crimson;
+}
+
+.note-cont {
+    height: calc(100% - 2rem);
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    resize: none;
+    border: none;
+    background-color: #feff9c;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Openboard</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="icon"
+            href="Openboard clone\icon\favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="styleOpenboard.css" />
+    </head>
+    <body>
+        <!-- Om Ganeshay namah. -->
+        <div class="options-cont">
+            <i class="fas fa-sort-down option-down" style="display: none"></i>
+            <i class="fas fa-sort-up option-up" style="display: block"></i>
+        </div>
+        <div class="tools-cont">
+            <i class="pencil fas fa-pen"></i>
+            <i class="eraser fas fa-eraser"></i>
+            <i class="download fas fa-download"></i>
+            <i class="upload fas fa-images"></i>
+            <i class="sticky fas fa-comment-alt"></i>
+            <i class="undo fas fa-undo"></i>
+            <i class="redo fas fa-redo-alt"></i>
+        </div>
+        <div class="pencil-tool-cont">
+            <div class="pencil-width-cont">
+                <input
+                    type="range"
+                    min="2"
+                    max="10"
+                    value="3"
+                    class="pencil-width"
+                />
+            </div>
+            <div class="pencil-color-cont">
+                <div class="black pencil-color"></div>
+                <div class="blue pencil-color"></div>
+                <div class="red pencil-color"></div>
+            </div>
+        </div>
+        <div class="eraser-tool-cont">
+            <input
+                type="range"
+                min="2"
+                max="10"
+                value="3"
+                class="eraser-width"
+            />
+        </div>
+        <canvas></canvas>
+
+        <!-- <div class="sticky-cont">
+            <div class="header-cont">
+                <div class="minimize"></div>
+                <div class="remove"></div>
+            </div>
+            <div class="note-cont">
+                <textarea></textarea>
+            </div>
+        </div> -->
+
+        <script
+            src="https://cdn.socket.io/4.4.0/socket.io.min.js"
+            integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            let socket = io.connect("http://localhost:5000");
+        </script>
+        <script src="tools.js"></script>
+        <script src="canvas.js"></script>
+    </body>
+</html>
